@@ -96,7 +96,7 @@ class NewVisitorTest(LiveServerTestCase):
         )
 
         inputbox.send_keys('testing\n')
-        inputbox = self.browser.find_element_by_id('input')
+        inputbox = self.browser.find_element_by_tag_name('input')
         self.assertAlmostEqual(
             inputbox.location['x'] + inputbox.size['width'] /2,
             512,
